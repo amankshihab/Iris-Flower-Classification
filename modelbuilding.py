@@ -1,5 +1,6 @@
 #importing required libraries
 import pandas as pd
+import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -16,9 +17,9 @@ dt = pd.read_csv('iris.csv', names = columns)
 model = KNeighborsClassifier(n_neighbors = 3)
 
 #independent variables to x
-x = dt.iloc[:, :4]
+x = np.array(dt.iloc[:, :4])
 #dependent variables to y
-y = dt.iloc[:, 4]
+y = np.array(dt.iloc[:, 4])
 
 #splitting into training and validation sets
 xt, xv, yt, yv = train_test_split(x, y, train_size = 0.7, random_state = 1)

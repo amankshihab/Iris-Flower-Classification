@@ -16,4 +16,4 @@ x = np.array([sl, sw, pl, pw]).reshape(1,-1)
 
 #predicting class
 p = model.predict(x)
-print("Predicted class: ", p)
+print("\nPredicted class: ", p)
