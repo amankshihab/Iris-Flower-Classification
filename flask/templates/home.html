@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classification</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+    </style>
+    <main>
+        <h1 style = "text-align: center; margin-left: auto; margin-right: auto;">Welcome to Iris Flower Classification</h1>
+        <h2 style = "text-align: center; margin-left: auto; margin-right: auto;">Made by Aman K. Shihab</h2>
+        <form action ="{{ url_for('predict') }}" method="POST">
+            <p style = "color: coral; text-align: center ;margin-left: auto; margin-right: auto;">Sepal Length <input name = "sepal_length" required = "required"></p>
+            <p style = "color: coral; text-align: center ;margin-left: auto; margin-right: auto;">Sepal Width <input name = "sepal_width" required = "required"></p>
+            <p style = "color: coral; text-align: center ;margin-left: auto; margin-right: auto;">Petal Length <input name = "petal_length" required = "required"></p>
+            <p style = "color: coral; text-align: center ;margin-left: auto; margin-right: auto;">Petal Width <input name = "petal_width" required = "required"></p>
+            <p style = "text-align: center; margin-left: auto; margin-right: auto;">Submit <input type="submit"></p>
+        </form>
+        <div>
+            <h1 style = "text-align: center; margin-left: auto; margin-right: auto;">My prediction is:</h1>
+            <p style = "color: black; text-align: center ;margin-left: auto; margin-right: auto; font-size: large">{{ p }} "</p>
+        </div>
+    </main>
+</body>
+</html>
